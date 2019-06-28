@@ -18,7 +18,14 @@ class Main:
         self.AvailBackColours = ["BLACK","RED","GREEN","YELLOW","BLUE","MAGENTA","CYAN","WHITE"]
         self.AvailStyles = ["DIM","BRIGHT","NORMAL"]
 
-    def LoadingEllipsis(self, Text, Delay, Count, CompletionMessage, BackColour, ForeColour):
+    def LoadingEllipsis(self, Text, Delay, Count, CompletionMessage):
+        print(Text,end='')
+        for count in range(0,Count):
+            print(".",end='')
+            time.sleep(Delay)
+        print(CompletionMessage)
+
+    def LoadingEllipsisColour(self, Text, Delay, Count, CompletionMessage, BackColour, ForeColour):
         Notify.SetForeColour(ForeColour)
         Notify.SetBackColour(BackColour)
         print(Text,end='')
@@ -29,7 +36,13 @@ class Main:
         Notify.ClearColour()
 
 
+
+
 ex = Main()
 
-ex.LoadingEllipsis("System Init",0.25,5,"OK","NONE","MAGENTA")
-#Notify.SetForeColour("RED")
+ex.LoadingEllipsisColour("System Self Check",1,5,"OK","NONE","RED")
+ex.LoadingEllipsis("Initializing Power Grid",1,5,"OK")
+
+
+
+input()

@@ -118,6 +118,8 @@ class Main():
             self.Magenta()
         elif Colour == "WHITE":
             self.White()
+        elif Colour == "NONE":
+            pass
 
     def ftt(self):
         print("FTT")
