@@ -119,6 +119,9 @@ class Main():
         elif Colour == "WHITE":
             self.White()
 
+    def ftt(self):
+        print("FTT")
+
     ## Backs
 
     def SetBackColour(self, Colour):

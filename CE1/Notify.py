@@ -103,7 +103,48 @@ class Main():
     def White(self):
         print(Fore.WHITE)
 
+    def SetForeColour(self, Colour):
+        if Colour == "RED":
+            self.Red()
+        elif Colour == "GREEN":
+            self.Green()
+        elif Colour == "CYAN":
+            self.Cyan()
+        elif Colour == "YELLOW":
+            self.Yellow()
+        elif Colour == "BLUE":
+            self.Blue()
+        elif Colour == "MAGENTA":
+            self.Magenta()
+        elif Colour == "WHITE":
+            self.White()
+
+    def ftt(self):
+        print("FTT")
+
     ## Backs
+
+    def SetBackColour(self, Colour):
+        if Colour == "BLACK":
+            self.BackBlack()
+        elif Colour == "RED":
+            self.BackRed()
+        elif Colour == "GREEN":
+            self.BackGreen()
+        elif Colour == "YELLOW":
+            self.BackYellow()
+        elif Colour == "BLUE":
+            self.BackBlue()
+        elif Colour == "MAGENTA":
+            self.BackMagenta()
+        elif Colour == "CYAN":
+            self.BackCyan()
+        elif Colour == "WHITE":
+            self.BackWhite()
+        elif Colour == "NONE":
+            pass
+        else:
+            self.Error("Invalid Colour!")
 
     def BackBlack(self):
         print(Back.BLACK)

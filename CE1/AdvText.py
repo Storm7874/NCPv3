@@ -9,6 +9,7 @@ except(ImportError):
     print("[ATX] Failed to import Notify. Aborting.")
     exit()
 
+Notify.Info("TEST")
 
 
 class Main:
@@ -30,4 +31,5 @@ class Main:
 
 ex = Main()
 
-ex.LoadingEllipsis("System Init",1,5,"OK","BLACK","RED")
+ex.LoadingEllipsis("System Init",0.25,5,"OK","NONE","MAGENTA")
+#Notify.SetForeColour("RED")
