@@ -1,6 +1,8 @@
 ## Advanced Text Manipulation (AdvText)
 
 import time
+import random
+import os
 try:
     from Notify import Main as NotifyMain
     Notify = NotifyMain()
@@ -8,9 +10,6 @@ try:
 except(ImportError):
     print("[ATX] Failed to import Notify. Aborting.")
     exit()
-
-Notify.Info("TEST")
-
 
 class Main:
     def __init__(self):
@@ -35,14 +34,27 @@ class Main:
         print(CompletionMessage)
         Notify.ClearColour()
 
+    def Example(self):
+        phrases = ["SYSTEM SELF TEST","RESERVE POWER GRID","MAIN POWER GRID","AUX ELECTRICAL SUBSYSTEMS","ENGINE DIAGNOSTICS CORE",
+                   "ICC SUBSYSTEM A","ICC SUBSYSTEM B","ICC SUBSYSTEM C","MAIN SHIP DIAGNOSTICS","SHIELD SUBSYSTEM","MAIN ENGINE CONTROL",
+                   "FLIGHT CONTROL RESERVE","FLIGHT CONTROL MAIN","A,B AND C WEAPON BUSSES","TARGETTING AND CONTROL COMPUTER","GUIDANCE",
+                   "NAVIGATION","LIFE SUPPORT","OXYGEN GENERATION","MEP","DCS","IRRRV"]
 
+        for count in range(0,len(phrases)):
+            self.LoadingEllipsis(phrases[count],0.25,random.randint(3,7),"OK")
+        print()
+        print("Ship initialization complete.")
+
+        time.sleep(5)
+
+        os.system("clear")
+
+        input()
 
 
 ex = Main()
 
-ex.LoadingEllipsisColour("System Self Check",1,5,"OK","NONE","RED")
-ex.LoadingEllipsis("Initializing Power Grid",1,5,"OK")
 
-
+ex.Example()
 
 input()
